@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@*@ViewBag.Title - Registeration*@</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="row">
+        <div class="text-center" >
+            <div style="height:200px">
+                <a href="@Url.Action("Index", "Home")">
+                    <img id="NA" src="~/Images/Banner.jpg" style="height:200px" alt="NA" />
+                </a>
+                @* <p>@Html.ActionLink("*****", "Index", null, new { @class = "site-logo" })</p>*@
+
+                @*<img id="CPLogo" alt="CPLogo" height="46" style="top:inherit;border:solid;border-width:thin;border-color:black" src="~/Images/Banner.jpg" />*@
+            </div>
+            @*<div style="text-align:center;font-family:Arial;font-weight:bolder;font-size:2em">
+                Site Title
+                <div style="float:right">
+                    <a href="@Url.Action("Index", "Home")">
+                        <img id="ns" src="~/Images/Banner.jpg" height="46" style="top:inherit" alt="N S" />
+                    </a>
+
+                </div>
+            </div>*@
+        </div>
+    </div>
+   
+        <div class="row">
+            <div class="col-md-4">
+                    <div class="container">
+                        <div class="navbar-header">
+                            @*<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+                        </div>
+                        @*<div class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav">
+                                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                                </ul>
+                            </div>*@
+                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="container body-conten">
+                    @RenderBody()
+                    <hr />
+                </div>
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - SamsungSDS</p>
+                </footer>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+</body>
+</html>
